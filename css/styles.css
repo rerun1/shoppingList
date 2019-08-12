@@ -201,3 +201,6 @@ h2 {
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(60,78,95,1.0);
 }
+#userList {
+  display: none;
+}
