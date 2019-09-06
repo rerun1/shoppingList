@@ -211,3 +211,7 @@ h2 {
 ul {
   list-style: none;
 }
+
+#userCompletedList ul li:before {
+  content: '✓';
+}

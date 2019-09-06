@@ -1,9 +1,10 @@
+
 // Business logic for TaskList object
 
 function TaskList() {
-  this.tasks = [];
-  this.currentId = 0;
-  this.completedTasks = [];
+  this.tasks = [],
+  this.currentId = 0,
+  this.completedTasks = []
 }
 TaskList.prototype.addTask = function(task) {
   task.id = this.assignId();
@@ -23,7 +24,6 @@ TaskList.prototype.findTask = function(id) {
   };
   return false;
 }
-
 TaskList.prototype.deleteTask = function(id) {
   for (var i = 0; i < this.tasks.length; i ++) {
     if (this.tasks[i]) {
@@ -37,7 +37,6 @@ TaskList.prototype.deleteTask = function(id) {
   return false;
 }
 
-
 // Business logic for Task object
 function TaskItem(string) {
   this.task = string
@@ -49,15 +48,19 @@ var taskList = new TaskList();
 
 function displayTasks(taskListToDisplay){
   var taskListHtml = $("ul#displayTasks");
+  var completedTaskListHtml = $("ul#userCompletedTasks");
   var htmlForTaskItems = "";
+  var htmlForCompletedTaskItems = "";
   taskListToDisplay.tasks.forEach(function(taskItem){
     htmlForTaskItems += "<li id=" + taskItem.id + ">" + taskItem.task +"</li>";
   });
   taskListToDisplay.completedTasks.forEach(function(taskItem){
-    htmlForTaskItems += "<li id=" + taskItem.id + "> Done!" + taskItem.task +"</li>";
+    htmlForCompletedTaskItems += "<li id=" + taskItem.id + "> Done! - " + taskItem.task +"</li>";
   });
   taskListHtml.html(htmlForTaskItems);
+  completedTaskListHtml.html(htmlForCompletedTaskItems);
 };
+
 function showTaskToMarkComplete(taskId) {
   var taskItem = taskList.findTask(taskId);
   $("#userTaskToMarkComplete").show();
@@ -101,5 +104,4 @@ $(document).ready(function(){
     resetForm();
 
   });
-
 });
