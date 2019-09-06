@@ -152,12 +152,16 @@ body {
   font-weight: 400;
   font-style: normal;
   font-variant: normal;
-  background-image: url("../img/shoppingBags.jpg");
+  background-image: url("../img/toDoImage.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
 }
+input {
+  width: 60%;
+}
+
 .intro {
   font-family: 'ff-tisa-web-pro', serif;
   font-weight: normal;
@@ -201,6 +205,9 @@ h2 {
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(60,78,95,1.0);
 }
-#userList {
+#userTaskToMarkComplete {
   display: none;
+}
+ul {
+  list-style: none;
 }
