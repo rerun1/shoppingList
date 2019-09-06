@@ -53,6 +53,9 @@ function displayTasks(taskListToDisplay){
   taskListToDisplay.tasks.forEach(function(taskItem){
     htmlForTaskItems += "<li id=" + taskItem.id + ">" + taskItem.task +"</li>";
   });
+  taskListToDisplay.completedTasks.forEach(function(taskItem){
+    htmlForTaskItems += "<li id=" + taskItem.id + "> Done!" + taskItem.task +"</li>";
+  });
   taskListHtml.html(htmlForTaskItems);
 };
 function showTaskToMarkComplete(taskId) {
