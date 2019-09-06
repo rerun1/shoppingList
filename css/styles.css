@@ -215,3 +215,7 @@ ul {
 #userCompletedList ul li:before {
   content: '✓';
 }
+
+#userInstructions {
+  display: none;
+}

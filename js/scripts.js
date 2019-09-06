@@ -89,7 +89,7 @@ $(document).ready(function(){
   attachTaskListeners();
   $("form#taskForm").submit(function(event){
     event.preventDefault();
-
+    $("p#userInstructions").show();
     var inputtedTask = $("input#inputTask").val();
 
     var newTask = new TaskItem(inputtedTask);
