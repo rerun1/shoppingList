@@ -6,10 +6,10 @@
 ## Description
 Web program a allows users to add tasks to create a list of things to do and to indicate a task is done.
 
-Uses jQuery to remove the task from the list.
+Uses jQuery to display and remove the tasks from the lists representing the To Dos and the Completed Tasks.
 
 Behavior — plain English	Input	Output
-Program contains a constructor that creates a TaskList object containing a key value that is an array for tasks		function TaskList(task) {this.tasks=[]}
+Program contains a constructor that creates a TaskList object containing a key value that is an array for tasks:		function TaskList(task) {this.tasks=[]}
 Program contains a constructor that creates a Task object containing a string representing the task	function Task(newTask) {this.task};
 var testTask = new Task (task) {this.task=“”};
 console.log(testTask);
@@ -56,7 +56,7 @@ All previous objectives have been met.
 ## Current Screenshot for Reference
 <br>
 
-![alt text](https://raw.githubusercontent.com/rerun1/shoppingList/master/img/screenShot8-10-19.png)
+![alt text](https://raw.githubusercontent.com/rerun1/toDoList/master/img/screenShot9-5-19.png)
 <br>
 <br>
 

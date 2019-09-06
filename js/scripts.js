@@ -47,7 +47,7 @@ function TaskItem(string) {
 var taskList = new TaskList();
 
 function displayTasks(taskListToDisplay){
-  var taskListHtml = $("ul#displayTasks");
+  var taskListHtml = $("ol#displayTasks");
   var completedTaskListHtml = $("ul#userCompletedTasks");
   var htmlForTaskItems = "";
   var htmlForCompletedTaskItems = "";
@@ -55,7 +55,7 @@ function displayTasks(taskListToDisplay){
     htmlForTaskItems += "<li id=" + taskItem.id + ">" + taskItem.task +"</li>";
   });
   taskListToDisplay.completedTasks.forEach(function(taskItem){
-    htmlForCompletedTaskItems += "<li id=" + taskItem.id + "> Done! - " + taskItem.task +"</li>";
+    htmlForCompletedTaskItems += "<li id=" + taskItem.id + ">" + taskItem.task +" - is Done!</li>";
   });
   taskListHtml.html(htmlForTaskItems);
   completedTaskListHtml.html(htmlForCompletedTaskItems);
@@ -75,7 +75,7 @@ function markTaskComplete(taskId) {
   displayTasks(taskList);
 };
 function attachTaskListeners() {
-  $("ul#displayTasks").on("click", "li", function() {
+  $("ol#displayTasks").on("click", "li", function() {
     showTaskToMarkComplete(this.id);
   });
   $("#buttons").on("click", ".markComplete", function() {
